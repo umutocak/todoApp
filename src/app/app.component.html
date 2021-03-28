@@ -11,6 +11,10 @@
             <button class="btn btn-success" (click)="addItem(todoText.value); todoText.value='';">Add</button>
           </div>
         </div>
+        <div class="custom-control custom-checkbox my-3">
+            <input type="checkbox" [(ngModel)]="isDisplay" name="" class="custom-control-input" id="displayAll">
+            <label for="displayAll" class="custom-control-label"> Display All</label>
+        </div>
         <table class="table table-striped table-bordered">
           <thead>
             <tr>

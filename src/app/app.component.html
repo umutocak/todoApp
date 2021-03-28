@@ -6,9 +6,9 @@
           [{{ getName() }}] To Do List
         </h3>
         <div class="input-group">
-          <input type="text" class="form-control">
+          <input type="text" #todoText class="form-control">
           <div class="input-group-append">
-            <button class="btn btn-success">Add</button>
+            <button class="btn btn-success" (click)="addItem(todoText.value); todoText.value='';">Add</button>
           </div>
         </div>
         <table class="table table-striped table-bordered">

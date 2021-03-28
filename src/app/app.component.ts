@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Model } from './model';
+import { Model, TodoItem } from './model';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -16,5 +16,12 @@ export class AppComponent {
   getItems() {
     return this.model.items.filter(item=> !item.action);
     // ! sayesinde sadece false olan değerler yani No olanlar gelir.
+  }
+
+  addItem(value){
+    if (value != "")
+    {
+      this.model.items.push(new TodoItem(value,false));
+    }
   }
 }

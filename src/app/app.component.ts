@@ -14,6 +14,7 @@ export class AppComponent {
   }
 
   getItems() {
-    return this.model.items;
+    return this.model.items.filter(item=> !item.action);
+    // ! sayesinde sadece false olan değerler yani No olanlar gelir.
   }
 }
